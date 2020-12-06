@@ -29,9 +29,9 @@ import (
 	"android/soong/genrule"
 )
 
-const libLLVMSoFormat = "libLLVM-%ssvn.so"
-const libclangSoFormat = "libclang.so.%ssvn"
-const libclangCxxSoFormat = "libclang_cxx.so.%ssvn"
+const libLLVMSoFormat = "libLLVM-%sgit.so"
+const libclangSoFormat = "libclang.so.%sgit"
+const libclangCxxSoFormat = "libclang_cxx.so.%sgit"
 const libcxxSoName = "libc++.so.1"
 const libcxxabiSoName = "libc++abi.so.1"
 
@@ -157,6 +157,9 @@ type archProps struct {
 	Android_x86_64 struct {
 		Srcs []string
 	}
+	Android_riscv64 struct {
+		Srcs []string
+	}
 }
 
 func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
@@ -179,6 +182,7 @@ func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
 	p.Target.Android_x86.Srcs = []string{path.Join(libDir, "i386", name)}
 	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
+	p.Target.Android_riscv64.Srcs = []string{path.Join(libDir, "riscv64", name)}
 	ctx.AppendProperties(p)
 }
 
