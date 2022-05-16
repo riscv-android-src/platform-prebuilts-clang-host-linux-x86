@@ -178,6 +178,9 @@ type archProps struct {
 	Android_x86_64 struct {
 		Srcs []string
 	}
+        Android_riscv64 struct {
+                Srcs []string
+        }
 	Linux_bionic_arm64 struct {
 		Srcs []string
 	}
@@ -206,6 +209,7 @@ func llvmPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
 	p.Target.Android_x86.Srcs = []string{path.Join(libDir, "i386", name)}
 	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
+	p.Target.Android_riscv64.Srcs = []string{path.Join(libDir, "riscv64", name)}
 	p.Target.Linux_bionic_arm64.Srcs = []string{path.Join(libDir, "aarch64", name)}
 	p.Target.Linux_bionic_x86_64.Srcs = []string{path.Join(libDir, "x86_64", name)}
 	ctx.AppendProperties(p)
