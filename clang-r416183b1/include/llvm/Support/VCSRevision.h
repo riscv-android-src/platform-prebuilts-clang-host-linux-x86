@@ -1,2 +1,2 @@
-#define LLVM_REVISION "c56b00b945c56d2dc59e5675fb46cadb40d9afc9"
-#define LLVM_REPOSITORY "https://android.googlesource.com/toolchain/llvm-project"
+#define LLVM_REVISION "b2ea719685eeb6410a4a0d7ccdec1808e637fadc"
+#define LLVM_REPOSITORY "/home/maoh/android_clang/out/llvm-project/llvm"
