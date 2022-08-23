@@ -1,2 +1,2 @@
-#define LLVM_REVISION "f1f566c3d0ff34cd8f841859372a4aac0d967d83"
-#define LLVM_REPOSITORY "/home/share.dir/tmp_bakup_users/maoh/riscv-llvm-src/out/llvm-project/llvm"
+#define LLVM_REVISION "364875daa894c1ba55bfe2761cb1e0c8d920fd07"
+#define LLVM_REPOSITORY "/home/maoh/riscv-llvm-src/out/llvm-project/llvm"
